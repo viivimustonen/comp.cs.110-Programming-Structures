@@ -18,3 +18,8 @@ theme from all locations. Or favorite theme from all locations.
 
 ## Company
 Implements the module Company into the program that first reads company information from the input file, and the permits the user to make searches concerning the relationships in the company.
+
+## Match 3
+The purpose of the game is to remove as many fruits as possible from the board. The user can move two adjacent fruits (colored squares).
+The transfer is performed by entering the coordinates of the first fruit to be transferred and by selecting the transfer direction from 
+the radio button element. The game checks if the transfer is possible. The transfer is impossible if there is no legal coordinate (column and row letter) or direction of movement is out off the board. In addition, "the move" must produce at least three consecutive fruits.
