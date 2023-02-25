@@ -1,0 +1,20 @@
+#CSV-fields
+#<ID>;<Department>;<Time in service>;<Boss>
+
+Maarit;TiTe;15;Terhi
+Kari;TiTe;7;Timo
+Timo;TiTe;10;big boss
+big boss;administration;1;
+secretary;administration;4;big boss
+Antti;TiTe;5;Kari
+Terhi;TiTe;18;Timo
+Eliisa;TiTe;5;Terhi
+Mika;TiTe;10;Terhi
+Minna;TiTe;1;Maarit
+#Minna;TiTe;20;Maarit
+Eero;Math;10;big boss
+Markus;Math;5;Eero
+Manu;Math;4;Eero
+Jarno;TiTe;5;
+Mikko;TiTe;0.5;Jarno
+Arttu;TiTe;0.5;Jarno

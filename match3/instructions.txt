@@ -1,0 +1,71 @@
+#############################################################################
+# COMP.CS.110 Programming 2: Autumn 2020                                    #
+# Project3: Match3                                                          #
+# File: instructions.txt                                                    #                                                                   #
+# Program author: * Name: Viivi Mustonen                                    #
+#                 * Student number: H293452                                 #
+#                 * UserID: tgvimu                                          #
+#                 * E-Mail: viivi.mustonen@tuni.fi                          #
+#                                                                           #
+#############################################################################
+
+Pelin toiminta:
+Pelin tarkoitus on poistaa laudalta mahdollisimman monta hedelmää.
+
+Käyttäjä voi siirtää kahta vierekkäistä hedelmää (värikästä ruutua).
+Siirto suoritetaan antamalla koordinaatit ensimmäiselle siirretävälle hedelmälle
+sekä valitsemalla siirtosuunta radio button elementistä. Peli tarkastaa, onko
+siirto mahdollinen. Siirto ei ole mahdollinen, mikäli käyttäjän syöte ei ole
+laillinen koordinaatti (sarakkeen ja rivin kirjain) tai siirtosuunta on ulos
+laudalta. Lisäksi siirron tulee muodostaa vähintään kolme peräkkäistä hedelmää.
+Siirron ajaksi pelin kontrollit disabloidaan.
+
+Siirron jälkeen poistetaan kaikki hedelmät, jotka muodostavat vähintään kolme
+peräkkäistä hedelmää. Peli osaa poistaa hedelmät myös tilanteessa, jossa
+muodostuu useita match 3 osumia kerralla.
+
+Poistettujen hedelmien yläpuolella olevat hedelmät pudotetaan tyhjille
+paikoille. Mikäli pudotuksen jälkeen muodostuu uusia match 3 tilanteita,
+poistetaan hedelmät, kunnes ei tule enää uusia osumia.
+
+Peliin käytetty aika näytetään näytöllä. Aika toimii kuten shakkikellossa.
+Pellin käytetty aika pysähtyy siirron ajaksi ja jatkuu, kun siirto on suoritettu.
+Aika nollataan, kun käyttäjä käynnistää uuden pelin.
+
+Käyttöohje:
+Valitse siirrettävän hedelmän koordinaatit (sarakkeen ja rivin kirjain)
+Valitse siirtosuunta
+Suorita siirto
+Info boksi näyttää mahdolliset virheet tai kertoo siirron onnistuneen.
+Pelin voi sulkea milloin vain Sulje-painikkeella.
+Uuden pelin voi käynnistää, jos siirto ei ole kesken "Uusi peli" panikkeella.
+
+Jokaisesta poistetusta hedelmästä saa 10 pistettä:
+3 samaa hedelmää: 30p
+4 samaa hedelmää: 40p
+5 samaa hedelmää: 50p (joko kulmana tai suorana)
+jne.
+
+Suunnitelupäätökset:
+Hedelmät tallennetaan Fruit-Structeihin. Pelilauta ajatellaan ruudukkona,
+joka muodostuu vektoreista. Sarake vektori sisältää rivi vectorit, joiden
+alkioina on Fruit-structeja. Siirrot suoritetaan päivittämällä arvoja
+vectoreissa. Match 3 -tilanteet etsitään ja tallennetaan omaan vektoriin.
+Vastaavasti pudotettavat hedelmät tallennetaan omaan vektoriinsa.
+
+Lisätehtävät:
+Ohjelmaan on toteutettu seuraavat lisätehtävät:
+- Lisätehtävä 4: Pelissä käytetty aika lasketaan.
+  Pelin aikana kerrotaan siihen mennessä kulunut aika. (10 p.)
+
+- Lisätehtävä 5: Pelissä on pistelasku, jokainen poistettu hedelmä antaa pisteitä.
+  Pistetilanne myös ilmoitetaan käyttäjälle. (5 p.)
+
+- Lisätehtävä 6: Jos vaihdon seurauksena löytyy enemmän kuin kolme samanlaista
+  hedelmää peräkkäin, poistetaan kaikki peräkkäiset samanlaiset hedelmät, ja
+  annetaan pelaajalle sitä enemmän pisteitä, mitä enemmän hedelmiä hän saa
+  poistettua kerralla. (10 p.)
+
+- Lisätehtävä 8: Pelin päätyttyä (tai muutenkin) peliasetelman voi palauttaa
+  alkutilanteeseen, jolloin käyttäjä voi aloittaa uuden pelin käynnistämättä
+  ohjelmaa uudelleen. (5 p.)
